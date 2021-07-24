@@ -85,7 +85,7 @@ bnt.addEventListener('click', function () {
         ponto.innerHTML = `${mais1}`
         clicou.innerHTML = `${cont}`
     }
-    if (cont === 10) {
+    if (cont === 6) {
         cont = 0
         mais1--
         if (mais1 < 0) {
@@ -95,7 +95,7 @@ bnt.addEventListener('click', function () {
         clicou.innerHTML = `${cont}`
     }
 
-    if (mais1 === 3) {
+    if (mais1 === 6) {
         document.getElementById('estilo').href = "./css/vitoria.css"
     }
 
