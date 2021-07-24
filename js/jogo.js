@@ -1,112 +1,116 @@
-const rolarDado1 = () => {
-    let dado1 = Math.floor(Math.random() * 6 + 1)
-    switch (dado1) {
-        case 1:
-            document.getElementById("face1").src = "./img/face1.png"
-            break;
-        case 2:
-            document.getElementById("face1").src = "./img/face2.png"
-            break;
-        case 3:
-            document.getElementById("face1").src = "./img/face3.png"
-            break;
-        case 4:
-            document.getElementById("face1").src = "./img/face4.png"
-            break;
-        case 5:
-            document.getElementById("face1").src = "./img/face5.png"
-            break;
-        case 6:
-            document.getElementById("face1").src = "./img/face6.png"
-            break;
-        default:
-            // caso contrário
-            break;
-    }
-    return dado1
-}
+function tela() {
 
-const rolarDado2 = () => {
-    let dado2 = Math.floor(Math.random() * 6 + 1)
-    switch (dado2) {
-        case 1:
-            document.getElementById("face2").src = "./img/face1.png"
-            break;
-        case 2:
-            document.getElementById("face2").src = "./img/face2.png"
-            break;
-        case 3:
-            document.getElementById("face2").src = "./img/face3.png"
-            break;
-        case 4:
-            document.getElementById("face2").src = "./img/face4.png"
-            break;
-        case 5:
-            document.getElementById("face2").src = "./img/face5.png"
-            break;
-        case 6:
-            document.getElementById("face2").src = "./img/face6.png"
-            break;
-        default:
-            // caso contrário
-            break;
-    }
-    return dado2
-}
-const bnt = document.getElementById('rolar')
-const bntVoltar = document.getElementById('voltar')
-const ponto = document.getElementById('pnt')
-const clicou = document.getElementById('pontoClick')
-const tentativa = document.getElementById('vida')
-let mais1 = 0
-let cont = 0
-let vida = 3
-tentativa.innerHTML = `${vida}`
+    const fundo = document.getElementById('fundo')
+    const bnt = document.getElementById('rolar')
+    const bntVoltar = document.getElementById('voltar')
+    const ponto = document.getElementById('pnt')
+    const clicou = document.getElementById('pontoClick')
+    const tentativa = document.getElementById('vida')
 
+    fundo.style.backgroundColor = '#164b91'
 
-bntVoltar.addEventListener('click', function () {
-    document.getElementById('estilo').href = "./css/style.css"
-    vida = 3
-    mais1 = 0
+    let mais1 = 0
+    let cont = 0
+    let vida = 3
+
     tentativa.innerHTML = `${vida}`
-    ponto.innerHTML = `${mais1}`
-})
 
-bnt.addEventListener('click', function () {
-    cont++
-    clicou.innerHTML = `${cont}`
-    rolarDado1()
-    rolarDado2()
-
-
-    if (rolarDado1() === rolarDado2()) {
-        mais1++
-        cont = 0
-        ponto.innerHTML = `${mais1}`
-        clicou.innerHTML = `${cont}`
-    }
-    if (cont === 10) {
-        cont = 0
-        mais1--
-        if (mais1 < 0) {
-            mais1 = 0
+    const rolarDado1 = () => {
+        let dado1 = Math.floor(Math.random() * 6 + 1)
+        switch (dado1) {
+            case 1:
+                document.getElementById("face1").src = "./img/face1.png"
+                break;
+            case 2:
+                document.getElementById("face1").src = "./img/face2.png"
+                break;
+            case 3:
+                document.getElementById("face1").src = "./img/face3.png"
+                break;
+            case 4:
+                document.getElementById("face1").src = "./img/face4.png"
+                break;
+            case 5:
+                document.getElementById("face1").src = "./img/face5.png"
+                break;
+            case 6:
+                document.getElementById("face1").src = "./img/face6.png"
+                break;
+            default:
+                // caso contrário
+                break;
         }
-        ponto.innerHTML = `${mais1}`
-        clicou.innerHTML = `${cont}`
+        return dado1
     }
 
-    if (mais1 === 3) {
-        document.getElementById('estilo').href = "./css/vitoria.css"
+    const rolarDado2 = () => {
+        let dado2 = Math.floor(Math.random() * 6 + 1)
+        switch (dado2) {
+            case 1:
+                document.getElementById("face2").src = "./img/face1.png"
+                break;
+            case 2:
+                document.getElementById("face2").src = "./img/face2.png"
+                break;
+            case 3:
+                document.getElementById("face2").src = "./img/face3.png"
+                break;
+            case 4:
+                document.getElementById("face2").src = "./img/face4.png"
+                break;
+            case 5:
+                document.getElementById("face2").src = "./img/face5.png"
+                break;
+            case 6:
+                document.getElementById("face2").src = "./img/face6.png"
+                break;
+            default:
+                // caso contrário
+                break;
+        }
+        return dado2
     }
 
-    if (cont === 0 && mais1 === 0) {
-        vida--
+    bntVoltar.addEventListener('click', function () {
+        document.getElementById('estilo').href = "./css/style.css"
+        vida = 3
+        mais1 = 0
         tentativa.innerHTML = `${vida}`
-    }
+        ponto.innerHTML = `${mais1}`
+    })
 
-    if (vida === 0) {
-        document.getElementById('estilo').href = "./css/telaDerrota.css"
-    }
+    bnt.addEventListener('click', function () {
+        cont++
+        clicou.innerHTML = `${cont}`
+        rolarDado1()
+        rolarDado2()
 
-})
 
+        if (rolarDado1() === rolarDado2()) {
+            mais1++
+            cont = 0
+            ponto.innerHTML = `${mais1}`
+            clicou.innerHTML = `${cont}`
+        }
+        if (cont === 10) {
+            cont = 0
+            mais1--
+            if (mais1 < 0) {
+                mais1 = 0
+            }
+            ponto.innerHTML = `${mais1}`
+            clicou.innerHTML = `${cont}`
+        }
+        if (mais1 === 3) {
+            document.getElementById('estilo').href = "./css/vitoria.css"
+        }
+        if (cont === 0 && mais1 === 0) {
+            vida--
+            tentativa.innerHTML = `${vida}`
+        }
+        if (vida === 0) {
+            document.getElementById('estilo').href = "./css/telaDerrota.css"
+        }
+    })
+
+}   tela()
