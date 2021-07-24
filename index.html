@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link id="estilo" rel="stylesheet" href="./css/style.css">
 
     <title>Jogo Do Dado</title>
 
@@ -12,6 +12,12 @@
 <body id="fundo">
 
     <main id="tela">
+
+        <div id="derrota">
+            <div id="txtDerrota">
+                <h1><span class="modTXT">Você Perdeu!</span> Tente De Novo!</h1>
+            </div>
+        </div>
 
         <div id="topo">
 
@@ -42,10 +48,12 @@
             <img src="./img/face1.png" alt="dado" id="face2">
         </div>
 
-        <div id="botao">
+        <div class="botao" id="rolar" >
             <h3>Rolar!!</h3>
         </div>
-
+        <div class="botao" id="voltar" >
+            <h3>De volta ao Jogo</h3>
+        </div>
     </main>
 
 <script src="./js/jogo.js"></script>

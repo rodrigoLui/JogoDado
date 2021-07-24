@@ -53,7 +53,8 @@ const rolarDado2 = () => {
     }
     return dado2
 }
-const bnt = document.getElementById('botao')
+const bnt = document.getElementById('rolar')
+const bntVoltar = document.getElementById('voltar')
 const ponto = document.getElementById('pnt')
 const clicou = document.getElementById('pontoClick')
 const tentativa = document.getElementById('vida')
@@ -61,6 +62,15 @@ let mais1 = 0
 let cont = 0
 let vida = 3
 tentativa.innerHTML = `${vida}`
+
+
+bntVoltar.addEventListener('click', function () {
+    document.getElementById('estilo').href = "./css/style.css"
+    vida = 3
+    tentativa.innerHTML = `${vida}`
+    // bntVoltar.classList.remove('botao')
+    // location.reload();
+})
 
 bnt.addEventListener('click', function () {
     cont++
@@ -75,7 +85,7 @@ bnt.addEventListener('click', function () {
         ponto.innerHTML = `${mais1}`
         clicou.innerHTML = `${cont}`
     }
-    if (cont === 6) {
+    if (cont === 3) {
         cont = 0
         mais1--
         if (mais1 < 0) {
@@ -90,4 +100,10 @@ bnt.addEventListener('click', function () {
         tentativa.innerHTML = `${vida}`
     }
 
+    if (vida === 0) {
+        document.getElementById('estilo').href = "./css/telaDerrota.css"
+        // bntVoltar.classList.add('botao')
+    }
+
 })
+
