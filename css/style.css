@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#fundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    width: 100vw;
+    height: 99vh;
+    overflow-y: hidden;
+}
+
+#tela {
+    max-width: 500px;
+    width: 90%;
+    max-height: 500px;
+    height: 90vh;
+    background-color: white;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#dado {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#AreaPonto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+    #pnt, #pontoClick, #vida {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .ponto{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+#botao {
+    background-color: #808080;
+    height: 40px;
+    width: 80%;
+    border: 2px solid #808080;
+    border-radius: 25px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#botao:hover {
+    border: 2px solid #545454;
+    background-color: #818a92;
+}
