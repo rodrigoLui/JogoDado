@@ -67,9 +67,9 @@ tentativa.innerHTML = `${vida}`
 bntVoltar.addEventListener('click', function () {
     document.getElementById('estilo').href = "./css/style.css"
     vida = 3
+    mais1 = 0
     tentativa.innerHTML = `${vida}`
-    // bntVoltar.classList.remove('botao')
-    // location.reload();
+    ponto.innerHTML = `${mais1}`
 })
 
 bnt.addEventListener('click', function () {
@@ -85,7 +85,7 @@ bnt.addEventListener('click', function () {
         ponto.innerHTML = `${mais1}`
         clicou.innerHTML = `${cont}`
     }
-    if (cont === 3) {
+    if (cont === 10) {
         cont = 0
         mais1--
         if (mais1 < 0) {
@@ -95,6 +95,10 @@ bnt.addEventListener('click', function () {
         clicou.innerHTML = `${cont}`
     }
 
+    if (mais1 === 3) {
+        document.getElementById('estilo').href = "./css/vitoria.css"
+    }
+
     if (cont === 0 && mais1 === 0) {
         vida--
         tentativa.innerHTML = `${vida}`
@@ -102,7 +106,6 @@ bnt.addEventListener('click', function () {
 
     if (vida === 0) {
         document.getElementById('estilo').href = "./css/telaDerrota.css"
-        // bntVoltar.classList.add('botao')
     }
 
 })

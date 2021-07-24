@@ -28,6 +28,7 @@
     align-items: center;
 }
 
+#derrota { display: none; }
 #topo { display: none; }
 #dado { display: none; }
 #rolar { display: none; }

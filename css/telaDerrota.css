@@ -29,6 +29,7 @@
     align-items: center;
 }
 
+#vitoria { display: none; }
 #topo { display: none; }
 #dado { display: none; }
 #rolar { display: none; }
