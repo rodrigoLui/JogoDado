@@ -54,6 +54,7 @@ const rolarDado2 = () => {
     return dado2
 }
 const bnt = document.getElementById('botao')
+
 const ponto = document.getElementById('pnt')
 const clicou = document.getElementById('pontoClick')
 const tentativa = document.getElementById('vida')

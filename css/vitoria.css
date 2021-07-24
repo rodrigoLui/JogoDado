@@ -4,12 +4,11 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 #fundo {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(22, 159, 212);
+    background-color: grey;
     width: 100vw;
     height: 99vh;
     overflow-y: hidden;
@@ -29,29 +28,24 @@
     align-items: center;
 }
 
-#dado {
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
+#topo { display: none; }
+#dado { display: none; }
+#rolar { display: none; }
 
-#AreaPonto {
+#vitoria {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
+    height: 50%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(113, 255, 47);
 }
-    #pnt, #pontoClick, #vida {
-        font-size: 20px;
-        font-weight: 600;
+    #txtVitoria{
+        color: #000000;
     }
-    .ponto{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
+
 
 .botao {
     background-color: #808080;
