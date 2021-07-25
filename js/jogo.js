@@ -73,3 +73,5 @@ function jogo() {
         ponto.innerHTML = `${addPonto}`
     })
 }   jogo()
+
+// Testando para mandar atualização para o GitHub
