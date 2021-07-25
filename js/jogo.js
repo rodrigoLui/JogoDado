@@ -13,6 +13,7 @@ function jogo() {
     // Inserção de dados na tela
 
     PontoVida.innerHTML = `${vida}`
+    tentativas.innerHTML = `${pontoTentativa}`
 
     //  Arrow Function Gerando Números Aleatórios
 
