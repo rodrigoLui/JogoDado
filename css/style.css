@@ -1,3 +1,4 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
@@ -5,16 +6,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* FUNDO DA TELA */
 #fundo {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #a1e02b;
+    background-color: #012a58;
     width: 100vw;
     height: 99vh;
     overflow-y: hidden;
 }
 
+/* CAIXA TELA DO JOGO */
 #tela {
     max-width: 500px;
     width: 90%;
@@ -29,9 +32,13 @@
     align-items: center;
 }
 
+/* DESATIVAÇÂO DE TELAS */
 #derrota { display: none; }
 #vitoria { display: none; }
 #voltar { display: none; }
+#telaInicial { display: none;}
+#iniciar { display: none;}
+
 
 #dado {
     height: 30%;
