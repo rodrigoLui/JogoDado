@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #164b91;
+    background-color: #012a58;
     width: 100vw;
     height: 99vh;
     overflow-y: hidden;
@@ -36,6 +36,8 @@
 #derrota { display: none; }
 #vitoria { display: none; }
 #voltar { display: none; }
+#telaInicial { display: none;}
+#iniciar { display: none;}
 
 
 #dado {

@@ -37,6 +37,8 @@
 #topo { display: none; }
 #dado { display: none; }
 #rolar { display: none; }
+#telaInicial { display: none;}
+#iniciar { display: none;}
 
 #derrota {
     display: flex;

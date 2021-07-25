@@ -1,5 +1,6 @@
 function jogo() {
     // Área de variáveis
+    const bntIniciar = document.getElementById('iniciar')
     const bnt = document.getElementById('rolar')
     const bntVoltar = document.getElementById('voltar')
     const ponto = document.getElementById('pnt')
@@ -22,6 +23,10 @@ function jogo() {
     }
 
     //  Eventos de Click!
+    bntIniciar.addEventListener('click', function () {
+        document.getElementById('estilo').href = "./css/style.css"
+    })
+
     bnt.addEventListener('click', function () {
         let dados = valorDados()
         document.getElementById("face1").src = `./img/face${dados[0]}.png`
@@ -38,7 +43,7 @@ function jogo() {
             ponto.innerHTML = `${addPonto}`
             tentativas.innerHTML = `${pontoTentativa}`
         }
-        if (pontoTentativa === 3) {
+        if (pontoTentativa === 6) {
             pontoTentativa = 0
             addPonto--
             if (addPonto < 0) {

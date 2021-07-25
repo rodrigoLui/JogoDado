@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="estilo" rel="stylesheet" href="./css/style.css">
+    <link id="estilo" rel="stylesheet" href="./css/iniciar.css">
 
     <title>Jogo Do Dado</title>
 
@@ -12,6 +12,25 @@
 <body id="fundo">
 
     <main id="tela">
+
+        <div id="telaInicial">
+
+            <h1>REGRAS</h1>
+
+            <div id="regras">
+                <ul id="listRegras">
+                    <li class="zebra"> Você inicia com 3 vidas </li>
+                    <li> Você ganha 1 ponto quando os dois dados param no mesmo valor </li>
+                    <li class="zebra"> Precisa atingir 10  pontos para ganhar </li>
+                    <li> Você tem 6 tentativas para conseguir 1 ponto</li>
+                    <li class="zebra"> Acada 6 tentativas você perde 1 ponto</li>
+                    <li> Se você conseguir 1 ponto antes de zerar as tentativas, elas resetam </li>
+                    <li class="zebra"> Se você não tiver pontos e usar as 6 tentativas ira perder 1 vida</li>
+                    
+                </ul>
+            </div>
+
+        </div>
 
         <div id="derrota">
             <div id="txtDerrota">
@@ -58,6 +77,9 @@
         </div>
         <div class="botao" id="voltar" >
             <h3>De volta ao Jogo</h3>
+        </div>
+        <div class="botao" id="iniciar" >
+            <h3>Jogar</h3>
         </div>
     </main>
 
