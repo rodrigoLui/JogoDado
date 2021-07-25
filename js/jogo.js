@@ -1,116 +1,69 @@
-function tela() {
-
-    const fundo = document.getElementById('fundo')
+function jogo() {
+    // Área de variáveis
     const bnt = document.getElementById('rolar')
     const bntVoltar = document.getElementById('voltar')
     const ponto = document.getElementById('pnt')
-    const clicou = document.getElementById('pontoClick')
-    const tentativa = document.getElementById('vida')
-
-    fundo.style.backgroundColor = '#164b91'
-
-    let mais1 = 0
-    let cont = 0
+    const tentativas = document.getElementById('pontoClick')
+    const PontoVida = document.getElementById('vida')
+    let addPonto = 0
+    let pontoTentativa = 0
     let vida = 3
 
-    tentativa.innerHTML = `${vida}`
+    // Inserção de dados na tela
 
-    const rolarDado1 = () => {
+    PontoVida.innerHTML = `${vida}`
+
+    //  Arrow Function Gerando Números Aleatórios
+
+    const valorDados = () => {
         let dado1 = Math.floor(Math.random() * 6 + 1)
-        switch (dado1) {
-            case 1:
-                document.getElementById("face1").src = "./img/face1.png"
-                break;
-            case 2:
-                document.getElementById("face1").src = "./img/face2.png"
-                break;
-            case 3:
-                document.getElementById("face1").src = "./img/face3.png"
-                break;
-            case 4:
-                document.getElementById("face1").src = "./img/face4.png"
-                break;
-            case 5:
-                document.getElementById("face1").src = "./img/face5.png"
-                break;
-            case 6:
-                document.getElementById("face1").src = "./img/face6.png"
-                break;
-            default:
-                // caso contrário
-                break;
-        }
-        return dado1
-    }
-
-    const rolarDado2 = () => {
         let dado2 = Math.floor(Math.random() * 6 + 1)
-        switch (dado2) {
-            case 1:
-                document.getElementById("face2").src = "./img/face1.png"
-                break;
-            case 2:
-                document.getElementById("face2").src = "./img/face2.png"
-                break;
-            case 3:
-                document.getElementById("face2").src = "./img/face3.png"
-                break;
-            case 4:
-                document.getElementById("face2").src = "./img/face4.png"
-                break;
-            case 5:
-                document.getElementById("face2").src = "./img/face5.png"
-                break;
-            case 6:
-                document.getElementById("face2").src = "./img/face6.png"
-                break;
-            default:
-                // caso contrário
-                break;
-        }
-        return dado2
+        return [dado1 , dado2]
     }
 
-    bntVoltar.addEventListener('click', function () {
-        document.getElementById('estilo').href = "./css/style.css"
-        vida = 3
-        mais1 = 0
-        tentativa.innerHTML = `${vida}`
-        ponto.innerHTML = `${mais1}`
-    })
-
+    //  Eventos de Click!
     bnt.addEventListener('click', function () {
-        cont++
-        clicou.innerHTML = `${cont}`
-        rolarDado1()
-        rolarDado2()
+        let dados = valorDados()
+        document.getElementById("face1").src = `./img/face${dados[0]}.png`
+        document.getElementById("face2").src = `./img/face${dados[1]}.png`
 
+        pontoTentativa++
 
-        if (rolarDado1() === rolarDado2()) {
-            mais1++
-            cont = 0
-            ponto.innerHTML = `${mais1}`
-            clicou.innerHTML = `${cont}`
+        tentativas.innerHTML = `${pontoTentativa}`
+    
+
+        if (dados[0] === dados[1]) {
+            addPonto++
+            pontoTentativa = 0
+            ponto.innerHTML = `${addPonto}`
+            tentativas.innerHTML = `${pontoTentativa}`
         }
-        if (cont === 10) {
-            cont = 0
-            mais1--
-            if (mais1 < 0) {
-                mais1 = 0
+        if (pontoTentativa === 30) {
+            pontoTentativa = 0
+            addPonto--
+            if (addPonto < 0) {
+                addPonto = 0
             }
-            ponto.innerHTML = `${mais1}`
-            clicou.innerHTML = `${cont}`
+            ponto.innerHTML = `${addPonto}`
+            tentativas.innerHTML = `${pontoTentativa}`
         }
-        if (mais1 === 3) {
+        if (addPonto === 1) {
             document.getElementById('estilo').href = "./css/vitoria.css"
         }
-        if (cont === 0 && mais1 === 0) {
+        if (pontoTentativa === 0 && addPonto === 0) {
             vida--
-            tentativa.innerHTML = `${vida}`
+            PontoVida.innerHTML = `${vida}`
         }
         if (vida === 0) {
             document.getElementById('estilo').href = "./css/telaDerrota.css"
         }
     })
 
-}   tela()
+    bntVoltar.addEventListener('click', function () {
+        document.getElementById('estilo').href = "./css/style.css"
+        vida = 3
+        addPonto = 0
+        PontoVida.innerHTML = `${vida}`
+        ponto.innerHTML = `${addPonto}`
+    })
+}   jogo()
