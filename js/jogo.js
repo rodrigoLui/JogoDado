@@ -38,7 +38,7 @@ function jogo() {
             ponto.innerHTML = `${addPonto}`
             tentativas.innerHTML = `${pontoTentativa}`
         }
-        if (pontoTentativa === 30) {
+        if (pontoTentativa === 3) {
             pontoTentativa = 0
             addPonto--
             if (addPonto < 0) {
@@ -47,7 +47,7 @@ function jogo() {
             ponto.innerHTML = `${addPonto}`
             tentativas.innerHTML = `${pontoTentativa}`
         }
-        if (addPonto === 1) {
+        if (addPonto === 10) {
             document.getElementById('estilo').href = "./css/vitoria.css"
         }
         if (pontoTentativa === 0 && addPonto === 0) {
