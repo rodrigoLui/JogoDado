@@ -1,4 +1,4 @@
-# JogoDado
+# Jogo Rolando Dados
  
 **Link para o jogo**: *https://rodrigolui.github.io/JogoDado/*
 
