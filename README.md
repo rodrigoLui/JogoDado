@@ -2,12 +2,18 @@
  
 **Link para o jogo**: *https://rodrigolui.github.io/JogoDado/*
 
-### funcionabilidade
+### Regras do jogo
 
-* O usuário tem 3 tentativas para atingir o ponto de vitória.
-* O usuário recebe 1 ponto sempre que os dois dados pararem no mesmo número e zera os pontos de click.
-* Se a quantidade de clicks atingir 6, sem ganhar nenhum ponto o usuário perde 1 ponto.
-* Se a quantidade de clicks e a quantidade de pontos atingirem 0 o usuário perde uma tentativa.
-* Se a tentativa atingir 0 deve aparecer uma tela de derrota.
-* Se os pontos atingirem o máximo de 15 pontos deve aparecer uma tela de vitória.
-* Se os pontos atingirem o máximo de 15 pontos deve aparecer uma tela de vitória.
+* Você inicia com 2 vidas 
+
+* Você ganha 1 ponto quando os dois dados param no mesmo valor
+
+* Precisa atingir 10  pontos para ganhar 
+
+* Você tem 6 tentativas para conseguir 1 ponto
+
+* Acada 6 tentativas você perde 1 ponto
+
+* Se você conseguir 1 ponto antes de zerar as tentativas, elas resetam 
+
+* Se você não tiver pontos e usar as 6 tentativas ira perder 1 vida
