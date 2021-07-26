@@ -7,8 +7,8 @@ function jogo() {
     const tentativas = document.getElementById('pontoClick')
     const PontoVida = document.getElementById('vida')
     let addPonto = 0
-    let pontoTentativa = 6
-    let vida = 3
+    let pontoTentativa = 5
+    let vida = 2
 
     // Inserção de dados na tela
 
@@ -40,12 +40,12 @@ function jogo() {
 
         if (dados[0] === dados[1]) {
             addPonto++
-            pontoTentativa = 6
+            pontoTentativa = 5
             ponto.innerHTML = `${addPonto}`
             tentativas.innerHTML = `${pontoTentativa}`
         }
         if (pontoTentativa === 0) {
-            pontoTentativa = 6
+            pontoTentativa = 5
             addPonto--
             if (addPonto < 0) {
                 addPonto = 0
@@ -56,7 +56,7 @@ function jogo() {
         if (addPonto === 10) {
             document.getElementById('estilo').href = "./css/vitoria.css"
         }
-        if (pontoTentativa === 6 && addPonto === 0) {
+        if (pontoTentativa === 5 && addPonto === 0) {
             vida--
             PontoVida.innerHTML = `${vida}`
         }
@@ -67,7 +67,7 @@ function jogo() {
 
     bntVoltar.addEventListener('click', function () {
         document.getElementById('estilo').href = "./css/style.css"
-        vida = 3
+        vida = 2
         addPonto = 0
         PontoVida.innerHTML = `${vida}`
         ponto.innerHTML = `${addPonto}`
